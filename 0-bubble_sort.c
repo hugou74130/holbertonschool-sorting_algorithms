@@ -7,7 +7,6 @@
  *
  * Description: Uses the Bubble sort algorithm. Prints the array after each swap.
  */
-
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
