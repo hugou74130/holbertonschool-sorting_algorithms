@@ -16,12 +16,10 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	current = (*list)->next;
-
 	while (current != NULL)
 	{
 		key = current;
 		current = current->next;
-
 		while (key->prev != NULL && key->prev->n > key->n)
 		{
 			/* Swap nodes */
@@ -30,12 +28,10 @@ void insertion_sort_list(listint_t **list)
 			key->prev->next = key->next;
 			key->next = key->prev;
 			key->prev = key->prev->prev;
-
 			if (key->prev != NULL)
 				key->prev->next = key;
 			else
 				*list = key;
-
 			print_list(*list);
 		}
 	}
