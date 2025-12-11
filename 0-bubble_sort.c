@@ -32,7 +32,6 @@ void bubble_sort(int *array, size_t size)
 				swapped = 1;
 			}
 		}
-		/* Optimization: If no swap, array is sorted */
 		if (swapped == 0)
 			break;
 	}
