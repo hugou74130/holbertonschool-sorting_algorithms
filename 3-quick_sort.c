@@ -11,10 +11,17 @@
  */
 int lomuto_partition(int *array, int low, int high, size_t size)
 {
-	int pivot = array[high];
-	int i = low - 1;
-	int j;
-	int temp;
+	int random, temp, pivot, i, j;
+
+	/* ----- pivot aléatoire ----- */
+	random = low + rand() % (high - low + 1);
+	temp = array[random];
+	array[random] = array[high];
+	array[high] = temp;
+
+	/* ----- Lomuto normal ----- */
+	pivot = array[high];
+	i = low - 1;
 
 	for (j = low; j < high; j++)
 	{
@@ -30,6 +37,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 			}
 		}
 	}
+
 	if (i + 1 != high)
 	{
 		temp = array[i + 1];
@@ -37,6 +45,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 		array[high] = temp;
 		print_array(array, size);
 	}
+
 	return (i + 1);
 }
 
