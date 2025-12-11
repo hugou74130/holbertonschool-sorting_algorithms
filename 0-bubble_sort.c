@@ -5,7 +5,8 @@
  * @array: Pointer to the array
  * @size: Size of the array
  *
- * Description: Uses the Bubble sort algorithm. Prints the array after each swap.
+ * Description: Uses the Bubble sort algorithm.
+ * Prints the array after each swap.
  */
 void bubble_sort(int *array, size_t size)
 {
