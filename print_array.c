@@ -1,9 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_array - Prints an array of integers
- *
  * @array: The array to be printed
  * @size: Number of elements in @array
  */
