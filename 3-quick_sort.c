@@ -64,7 +64,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
  * @size: Size of the array
  */
 void quick_sort(int *array, size_t size)
-{   
+{
 	if (!array || size < 2)
 		return;
 
